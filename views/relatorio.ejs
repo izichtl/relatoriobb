@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type='text/css' href="/views/assets/css/index.css" rel="stylesheet" media="screen">
+    <title>Pagamentos</title>
+</head>
+<body>
+    <div id='info'>    
+        <h1>Relatório de Depósitos e Transferências</h1>
+        <p>Script para tratamento e limpeza de dados bancários desenvolvido por Ivan Zichtl</p>
+    </div>
+    <div id='info' >
+        <form action = "/" method = "GET">
+            <input type = "submit" value = "Voltar">
+        </form>
+        
+
+        <p>Depósitos e Transferências identificadas</p>
+        
+            
+            
+    <table class="title">
+        <tr>
+            <th colspan="2">Relatório de Pagamentos</th>
+        </tr>
+    </table>
+    <table class="bodytable">
+        <% objArray.forEach(function(thing){ %>
+        
+            <table class="bodytable">
+                <tr>
+                    <th colspan="5">Relatório Operação <%= thing.op %> </th>
+                    </tr>
+                    <tr><th colspan="5"> Gerado em: <%= date.getDate() %>/<%= date.getMonth() %>/<%= date.getFullYear() %> Hora: <%= date.getHours() %>:<%= date.getMinutes() %></th></tr>
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Baixa</th>
+                    </tr>
+                    <% thing.data.forEach(function(thing){ %>
+                        <tr>
+                          <td><%= thing[0] %></td>
+                          <td><%= thing[1] %></td>
+                          <td><%= thing[2] %></td>
+                          <td><%= thing[3] %></td>
+                          <td> O </td>
+                        </tr>
+                    <% }) %>
+            </table>
+            <br>
+            <br>
+        <% }) %>
+
+        <%=  %>
+    
+</body>
+</html>

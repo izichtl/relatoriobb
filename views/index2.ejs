@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type='text/css' href="/views/assets/css/index.css" rel="stylesheet" media="screen">
+    <title>Pagamentos</title>
+</head>
+<body>
+    <div id='info'>    
+        <h1>Relatório de Depósitos e Transferências</h1>
+        <p>Script para tratamento e limpeza de dados bancários desenvolvido por Ivan Zichtl</p>
+    </div>
+    <div id='info' >
+
+        <p>Carregue um arquivo ou visualize o exemplo</p>
+    </div>
+    <form action = "/upload" method = "POST" enctype="multipart/form-data">
+        <input type="file" name="filePost">
+        <input type = "submit" value = "Enviar Extrato">
+    </form>
+    <form action = "/" method = "GET">
+        <input type = "submit" value = "Visualizar Exemplo">
+    </form>
+    <form action = "/exit" method = "GET">
+        <input type = "submit" value = "Fechar Aplicação">
+    </form>
+    <div>
+        
+    </div>
+</body>
+</html>
