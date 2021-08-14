@@ -88,7 +88,7 @@ app.post('/upload', upload.single("filePost"), (requisicao, resposta) =>{
 
 
 
-
-app.listen(3001 , ()=> {
+const port = process.env.PORT || 3001;
+app.listen(port , ()=> {
     console.log('Servidor rodando em 3001')
 });
